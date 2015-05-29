@@ -4,7 +4,7 @@ set fileencodings=utf-8,big5,gbk,latin1
 language messages zh_TW.UTF-8
 
 "set guifont=CPMono_v07_Plain:h12:cANSI
-"set guifont=DejaVu_Sans_Mono_for_Powerline:h14:cANSI
+set guifont=DejaVu_Sans_Mono_for_Powerline:h14:cANSI
 colorscheme desert
 
 set nocompatible
@@ -25,7 +25,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Lokaltog/vim-powerline'
+"Plugin 'Lokaltog/vim-powerline'
+Plugin 'bling/vim-airline'
 Plugin 'c9s/colorselector.vim'
 Plugin 'msanders/snipmate.vim'
 Plugin 'ap/vim-css-color'
@@ -39,8 +40,14 @@ Plugin 'vim-scripts/taglist.vim'
 call vundle#end()
 filetype plugin indent on
 
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 set laststatus=2
+set t_Co=256
+set laststatus=2
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#leftsep=' '
+let g:airline#extensions#tabline#left_alt_sep='|'
+let g:airline_powerline_fonts=1
 
 set nobackup
 set incsearch
