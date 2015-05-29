@@ -10,28 +10,36 @@ colorscheme desert
 set nocompatible
 
 " Setting up Vundle - the vim plugin bundler
-let iCanHazVundle=1
-let vundle_readme=expand('.vim/bundle/Vundle.vim/README.md')
-if !filereadable(vundle_readme)
-    echo "Installing Vundle..."
-    echo ""
-    silent !mkdir -p .vim/bundle
-    silent !git clone https://github.com/gmarik/Vundle.vim.git .vim/bundle/Vundle.vim
-    let iCanHazVundle=0
-endif
+"let iCanHazVundle=1
+"let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
+"if !filereadable(vundle_readme)
+"    echo "Installing Vundle..."
+"    echo ""
+"    silent !mkdir -p ~/.vim/bundle
+"    silent !git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"    let iCanHazVundle=0
+"endif
 
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+
 "Plugin 'Lokaltog/vim-powerline'
 Plugin 'bling/vim-airline'
 Plugin 'c9s/colorselector.vim'
-Plugin 'msanders/snipmate.vim'
 Plugin 'ap/vim-css-color'
-Plugin 'scrooloose/nerdtree'
+
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+"Plugin 'msanders/snipmate.vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'Townk/vim-autoclose'
+
 Plugin 'scrooloose/syntastic'
+Plugin 'scrooloose/nerdtree'
 "Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/FuzzyFinder'
