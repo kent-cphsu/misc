@@ -1,8 +1,9 @@
 
 set enc=utf-8
 set fileencodings=utf-8,big5,gbk,latin1
-language messages zh_TW.UTF-8
+"language messages zh_TW.UTF-8
 
+" XXX: run 'git clone https://github.com/powerline/fonts ~/.vim/bundle/vim-airline-fonts' and 'install.sh' to install fonts
 "set guifont=CPMono_v07_Plain:h12:cANSI
 set guifont=DejaVu_Sans_Mono_for_Powerline:h14:cANSI
 colorscheme desert
@@ -51,7 +52,6 @@ filetype plugin indent on
 "let g:Powerline_symbols = 'fancy'
 set laststatus=2
 set t_Co=256
-set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#leftsep=' '
 let g:airline#extensions#tabline#left_alt_sep='|'
