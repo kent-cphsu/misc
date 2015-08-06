@@ -1,7 +1,7 @@
 
 set enc=utf-8
 set fileencodings=utf-8,big5,gbk,latin1
-"language messages zh_TW.UTF-8
+language messages zh_TW.UTF-8
 
 " XXX: run 'git clone https://github.com/powerline/fonts ~/.vim/bundle/vim-airline-fonts' and 'install.sh' to install fonts
 "set guifont=CPMono_v07_Plain:h12:cANSI
@@ -39,12 +39,15 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'Townk/vim-autoclose'
 
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'scrooloose/syntastic'
 Plugin 'scrooloose/nerdtree'
 "Plugin 'kien/ctrlp.vim'
 Plugin 'vim-scripts/L9'
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'vim-scripts/taglist.vim'
+
+Plugin 'wannesm/wmgraphviz.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -69,6 +72,8 @@ set shiftwidth=4
 set showtabline=2
 
 syntax on
+
+au BufNewFile,BufRead *.asp set filetype=php
 
 " when scrolling, keep cursor 3 lines away from screen border
 set scrolloff=3
